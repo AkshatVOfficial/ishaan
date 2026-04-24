@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 
 <head>
     <meta charset="UTF-8" />
@@ -16,14 +16,15 @@
 <body>
     <div class="page-shell">
         <header class="topbar">
-            <div class="logo">IB</div>
-            <nav class="nav">
+            <a href="#top" class="logo" aria-label="Ishaan Bhatnagar, top of page">IB</a>
+            <nav class="nav" id="site-nav" aria-label="Primary">
                 <a href="#about">About</a>
                 <a href="#book">Book</a>
                 <a href="#features">Features</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <button class="menu-btn" aria-label="Open menu">☰</button>
+            <button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false"
+                aria-controls="site-nav">☰</button>
         </header>
 
         <main>
@@ -55,7 +56,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="hero-visual">
                     <!-- Put the author's portrait here -->
                     <img class="author-photo" src="assets/ishaan-portrait.jpg" alt="Portrait of Ishaan Bhatnagar">
@@ -72,15 +72,21 @@
                 </div>
             </section>
 
-            <section class="ticker">
-                <span>QUIET ROMANCE</span>
-                <span>EMOTIONAL STORYTELLING</span>
-                <span>SLOW BURN</span>
-                <span>INTIMATE TONE</span>
-                <span>QUIET ROMANCE</span>
+            <section class="ticker reveal" aria-label="Story themes">
+                <div class="ticker-viewport">
+                    <div class="ticker-marquee" id="ticker-marquee">
+                        <div class="ticker-segment">
+                            <span>Quiet romance</span>
+                            <span>Emotional storytelling</span>
+                            <span>Slow burn</span>
+                            <span>Intimate tone</span>
+                            <span>Contemporary fiction</span>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section class="book-showcase" id="book">
+            <section class="book-showcase reveal" id="book">
                 <div class="cover-wrap">
                     <!-- Main hero book cover -->
                     <img src="assets/before-we-learned-goodbye-cover.jpg" alt="Before We Learned Goodbye cover">
@@ -113,7 +119,7 @@
                 </div>
             </section>
 
-            <section class="sample">
+            <section class="sample reveal">
                 <h2>Read a Sample</h2>
                 <p>
                     “They existed in each other’s world, long before they ever spoke…”
@@ -121,7 +127,7 @@
                 <a class="btn primary" href="#">Read Full Chapter</a>
             </section>
 
-            <section class="story-band" id="about">
+            <section class="story-band reveal" id="about">
                 <div class="story-left">
                     <p class="section-tag">About the Author</p>
                     <h2>Ishaan writes like he’s trying to hold a feeling still.</h2>
@@ -138,19 +144,21 @@
                 </div>
             </section>
 
-            <section class="features" id="features">
+            <section class="features reveal" id="features">
                 <div class="feature-card">
                     <!-- Put a second book mockup or alternate cover here -->
                     <img src="assets/book-1.jpg" alt="Book feature 1">
                     <h3>Chapter Mood</h3>
-                    <p>A quiet, emotional atmosphere reflecting unspoken feelings, soft connections, and the gentle pace of two hearts discovering each other.</p>
+                    <p>A quiet, emotional atmosphere reflecting unspoken feelings, soft connections, and the gentle pace
+                        of two hearts discovering each other.</p>
                 </div>
 
                 <div class="feature-card">
                     <!-- Put a writing desk, notebook, or author lifestyle image here -->
                     <img src="assets/book-2.jpg" alt="Book feature 2">
                     <h3>Author Space</h3>
-                    <p>A calm and introspective corner that reflects the mind behind the story—someone who finds meaning in silence, emotions, and the beauty of subtle connections.</p>
+                    <p>A calm and introspective corner that reflects the mind behind the story—someone who finds meaning
+                        in silence, emotions, and the beauty of subtle connections.</p>
                 </div>
 
                 <div class="feature-card">
@@ -161,27 +169,27 @@
                 </div>
             </section>
 
-            <section class="quote-block">
+            <section class="quote-block reveal">
                 <p>
                     “Some stories are not loud. They just stay with you.”
                 </p>
             </section>
         </main>
 
-        <footer id="contact" class="footer">
+        <footer id="contact" class="footer reveal">
             <div>
                 <h3>Ishaan Bhatnagar</h3>
                 <p>Before We Learned Goodbye</p>
             </div>
-            <div class ="contact-links">
+            <div class="contact-links">
                 <a href="mailto:ibhatnagar1817@gmail.com">Gmail</a>
-                <a href="https://instagram.com/ishaan_bhatnagar_" target="_blank">Instagram</a>
-                <a href="https://x.com/Ishaan__bhat11?s=20" target="_blank">X</a>
+                <a href="https://instagram.com/ishaan_bhatnagar_" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://x.com/Ishaan__bhat11?s=20" target="_blank" rel="noopener noreferrer">X</a>
             </div>
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
